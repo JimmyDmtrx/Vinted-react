@@ -21,13 +21,27 @@ const Home = () => {
     fetchData();
   }, []);
   const id = "87654543";
-  return (
+  //  cliquer sur une annonce
+  // envoyer l'id de l'annonce en params dans l'url
+  // récupérer cet id dans Offer.js
+  // faire une requête dans cette page pour récupérer les infos de cette annonce
+  // afficher ces infos
+  return isLoading ? (
+    <p>ca charge</p>
+  ) : (
     <div>
-      <Header />
-      <Hero />
-      <div>{data.offers}</div>
-      <Link to={`/product/`}>Go to product with Link</Link>
+      {/* <Header />
+      <Hero /> */}
+      {data.offers.map((elem, index) => {
+        return (
+          <div key={index}>
+            <span>{elem.product_details}</span>
+          </div>
+        );
+      })}
+      {/* <Link to={`/product/`}>Go to product with Link</Link> */}
     </div>
   );
 };
+
 export default Home;
