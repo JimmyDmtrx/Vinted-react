@@ -5,6 +5,7 @@ const Header = () => {
       <button>s'inscrire</button>
       <button>se connecter</button>
       <button>vends tes articles</button>
+      <input type="text" placeholder="Votre recherche..." />
     </div>
   );
 };
