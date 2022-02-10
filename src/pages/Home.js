@@ -53,7 +53,7 @@ const Home = () => {
                     className="productPic"
                     src={elem.product_pictures[0].secure_url}
                     alt="pic"
-                  />{" "}
+                  />
                   <p className="productDescription">{elem.product_name}</p>
                   <p className="product-price">{elem.product_price}€</p>
                 </div>

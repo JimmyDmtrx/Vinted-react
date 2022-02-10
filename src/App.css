@@ -48,3 +48,32 @@
   justify-content: flex-end;
   /* border: 4px solid salmon; */
 }
+
+.form {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid grey;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+.inputForm {
+  border: none;
+  outline: none;
+  border-bottom: 1px black solid;
+  height: 40px;
+}
+.formcontain {
+  border: 2px solid chartreuse;
+  height: 100vh;
+  align-items: center;
+  display: flex;
+}
+.submitButton {
+  background-color: #2cb1ba;
+  width: 100%;
+  border-radius: 5px;
+  margin-top: 6px;
+  border: none;
+  color: white;
+  height: 35px;
+}
