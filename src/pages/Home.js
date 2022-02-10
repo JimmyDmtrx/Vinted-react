@@ -20,7 +20,6 @@ const Home = () => {
 
     fetchData();
   }, []);
-  const id = "87654543";
   //  cliquer sur une annonce
   // envoyer l'id de l'annonce en params dans l'url
   // récupérer cet id dans Offer.js
@@ -30,16 +29,39 @@ const Home = () => {
     <p>ca charge</p>
   ) : (
     <div>
-      {/* <Header />
-      <Hero /> */}
-      {data.offers.map((elem, index) => {
-        return (
-          <div key={index}>
-            <span>{elem.product_details}</span>
-          </div>
-        );
-      })}
-      {/* <Link to={`/product/`}>Go to product with Link</Link> */}
+      <Header />
+      <Hero />
+      <div className="containCard">
+        {data.offers.map((elem, index) => {
+          // console.log(elem);
+          // console.log(elem.product_details);
+          return (
+            <div>
+              <Link to={`/product/${elem._id}`}>
+                <div key={elem._id} className="card">
+                  <div className="headOfCard">
+                    <img
+                      className="profilePic"
+                      src={elem.owner.account.avatar.secure_url}
+                      alt="pic"
+                    />
+                    <div>
+                      <p>{elem.owner.account.username}</p>
+                    </div>
+                  </div>
+                  <img
+                    className="productPic"
+                    src={elem.product_pictures[0].secure_url}
+                    alt="pic"
+                  />{" "}
+                  <p className="productDescription">{elem.product_name}</p>
+                  <p className="product-price">{elem.product_price}€</p>
+                </div>
+              </Link>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };
