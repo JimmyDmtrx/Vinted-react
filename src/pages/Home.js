@@ -37,27 +37,28 @@ const Home = () => {
           // console.log(elem.product_details);
           return (
             <div>
-              <Link to={`/product/${elem._id}`}>
-                <div key={elem._id} className="card">
-                  <div className="headOfCard">
-                    <img
-                      className="profilePic"
-                      src={elem.owner.account.avatar.secure_url}
-                      alt="pic"
-                    />
-                    <div>
-                      <p>{elem.owner.account.username}</p>
-                    </div>
+              <div key={elem._id} className="card">
+                <div className="headOfCard">
+                  <img
+                    className="profilePic"
+                    src={elem.owner.account.avatar.secure_url}
+                    alt="pic"
+                  />
+
+                  <div>
+                    <p>{elem.owner.account.username}</p>
                   </div>
+                </div>
+                <Link to={`/product/${elem._id}`}>
                   <img
                     className="productPic"
                     src={elem.product_pictures[0].secure_url}
                     alt="pic"
                   />
-                  <p className="productDescription">{elem.product_name}</p>
-                  <p className="product-price">{elem.product_price}€</p>
-                </div>
-              </Link>
+                </Link>
+                <p className="productDescription">{elem.product_name}</p>
+                <p className="product-price">{elem.product_price}€</p>
+              </div>
             </div>
           );
         })}

@@ -1,21 +1,46 @@
 /* Other rules */
-* {
-  margin: 0 auto;
-}
+/* ----------------------HEADER------------------- */
 
 .header {
   margin-top: 20px;
   display: flex;
   justify-content: space-evenly;
 }
+.logo {
+  width: 83px;
+  height: 40px;
+}
+/* ----------HERO--------- */
+.relative {
+  position: relative;
+}
+
+.heropic {
+  width: 100vw;
+  max-height: 450px;
+  object-fit: cover;
+}
+/* --------CADRE sur HERO-------- */
+.tabHero {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  background-color: white;
+  width: 250px;
+  height: 250px;
+}
+
+/* ----------------------PRODUCT------------------- */
 .containCard {
   display: flex;
   padding: 20px;
   flex-wrap: wrap;
-
+  margin: 0 auto;
   flex-direction: row;
   max-width: 1180px;
 }
+
+/* -----CARD------- */
 .card {
   display: flex;
   width: 235px;
@@ -35,19 +60,17 @@
   overflow: hidden;
 }
 .headOfCard {
-  /* border: 3px solid chartreuse; */
   display: flex;
 }
 .productDescription {
   max-height: 22px;
   overflow: hidden;
-  /* border: solid 4px tomato; */
 }
 .product-price {
   align-items: flex-end;
   justify-content: flex-end;
-  /* border: 4px solid salmon; */
 }
+/* ----------------------FORM/SIGNUP------------------- */
 
 .form {
   display: flex;
@@ -77,3 +100,13 @@
   color: white;
   height: 35px;
 }
+.newsletter {
+  margin-top: 20px;
+  width: 300px;
+  color: grey;
+}
+.newsletter p {
+  font-size: 0.8em;
+}
+
+/* ----------------------LOGIN------------------- */

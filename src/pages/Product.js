@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import "./Product.css";
+import "../assets/CSS/Product.css";
 import Header from "../components/Header";
 
 const Product = () => {
