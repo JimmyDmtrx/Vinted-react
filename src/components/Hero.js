@@ -6,8 +6,8 @@ const Hero = () => {
         <img className="heropic" src={Heropic} alt="hero" />
       </div>
       <div className="tabHero">
-        <p>prets à faire du tri dans vos placard ?</p>
-        <button>commencez à vendre</button>
+        <p>prets à faire du tri dans vos placards ?</p>
+        <button className="button-hero">commencez à vendre</button>
       </div>
     </div>
   );

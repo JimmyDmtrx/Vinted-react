@@ -5,6 +5,7 @@ import Product from "./pages/Product";
 import SignUp from "./pages/SignUp";
 import Login from "./pages/Login";
 import NotFound from "./pages/NotFound";
+import Publish from "./pages/Publish";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/product/:id" element={<Product />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/publish" element={<Publish />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>

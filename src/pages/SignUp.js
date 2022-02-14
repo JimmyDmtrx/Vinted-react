@@ -2,35 +2,14 @@ import Header from "../components/Header";
 import { useState } from "react";
 import axios from "axios";
 import Cookies from "js-cookie";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-const SignUp = () => {
+const SignUp = (setUser) => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [newsletter, setNewsletter] = useState(false);
-  // const navigate = useNavigate();
-
-  const handleSubmit = async (event) => {
-    try {
-      event.preventDefault();
-      const response = await axios.post(
-        "https://lereacteur-vinted-api.herokuapp.com/user/signup",
-        { username, email, password, newsletter }
-      );
-      console.log(response.data.token);
-      if (response.data.token) {
-        const token = response.data.token;
-        Cookies.set("token", token, { expires: 10 });
-      }
-
-      // const handleHome = () => {
-      //   navigate("/");
-      // };
-    } catch (error) {
-      console.log(error.message);
-    }
-  };
+  const navigate = useNavigate();
   const handleUserNamechange = (event) => {
     const value = event.target.value;
     setUsername(value);
@@ -46,12 +25,30 @@ const SignUp = () => {
   const handleCheckBox = () => {
     setNewsletter(true);
   };
+  const handleSubmit = async (event) => {
+    try {
+      event.preventDefault();
+      const response = await axios.post(
+        "https://lereacteur-vinted-api.herokuapp.com/user/signup",
+        { username, email, password, newsletter }
+      );
+      console.log(response.data.token);
+      if (response.data.token) {
+        const token = response.data.token;
+        Cookies.set("userToken", token, { expires: 10 });
+        navigate("/");
+      }
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
 
   return (
     <div>
       <Header />
       <div className="formcontain">
         <form className="form" onSubmit={handleSubmit}>
+          <h1 className="h2form">Créez un compte</h1>
           <input
             className="inputForm"
             value={username}

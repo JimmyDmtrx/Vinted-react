@@ -1,15 +1,52 @@
 /* Other rules */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,100&display=swap");
 /* ----------------------HEADER------------------- */
-
+button {
+  cursor: pointer;
+}
+* {
+  font-family: "Roboto", sans-serif;
+}
 .header {
-  margin-top: 20px;
   display: flex;
-  justify-content: space-evenly;
+  align-items: center;
+  justify-content: space-between;
+  width: 1280px;
+  margin: auto;
+  padding: 10px 0;
 }
 .logo {
   width: 83px;
   height: 40px;
 }
+.search {
+  width: 600px;
+}
+/* ----------BUTTON_HAEDER--------- */
+
+.connect-button {
+  height: 30px;
+  width: 115px;
+  border: 1px solid #2cb1ba;
+  border-radius: 5px;
+  font-family: "Maison Neue";
+  font-size: 12px;
+  outline: none;
+  cursor: pointer;
+}
+.sold-button {
+  background-color: #2cb1ba;
+  color: #fff;
+  height: 30px;
+  width: 115px;
+  border: 1px solid #2cb1ba;
+  border-radius: 5px;
+  font-family: "Maison Neue";
+  font-size: 12px;
+  outline: none;
+  cursor: pointer;
+}
+
 /* ----------HERO--------- */
 .relative {
   position: relative;
@@ -17,17 +54,38 @@
 
 .heropic {
   width: 100vw;
-  max-height: 450px;
+  max-height: 500px;
   object-fit: cover;
 }
 /* --------CADRE sur HERO-------- */
 .tabHero {
+  height: 220px;
+  width: 360px;
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 3px;
+  font-size: 34px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   position: absolute;
-  top: 25px;
-  left: 25px;
-  background-color: white;
-  width: 250px;
-  height: 250px;
+  top: 75px;
+  box-shadow: 0 0 2px rgb(17 17 17 / 24%);
+  margin-left: 300px;
+}
+
+.button-hero {
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  width: 187px;
+  background-color: #2baeb7;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  padding: 0 14px;
+  margin-top: 32px;
 }
 
 /* ----------------------PRODUCT------------------- */
@@ -45,13 +103,13 @@
   display: flex;
   width: 235px;
   flex-direction: column;
-  border: 2px solid black;
   padding: 20px;
   height: 500px;
 }
 .profilePic {
-  height: 45px;
+  height: 25px;
   border-radius: 50%;
+  padding: 10px;
 }
 .productPic {
   width: 235px;
@@ -61,6 +119,7 @@
 }
 .headOfCard {
   display: flex;
+  align-items: center;
 }
 .productDescription {
   max-height: 22px;
@@ -75,18 +134,21 @@
 .form {
   display: flex;
   flex-direction: column;
-  border: 1px solid grey;
+  border-top: 10px solid #ffffff;
+  border-right: 10px solid #2cb1ba;
+  border-bottom: 10px solid #2cb1ba;
+  border-left: 10px double #ffffff;
   justify-content: space-evenly;
   padding: 20px;
 }
 .inputForm {
   border: none;
   outline: none;
-  border-bottom: 1px black solid;
+  border-bottom: 1px solid #fcced3;
   height: 40px;
 }
 .formcontain {
-  border: 2px solid chartreuse;
+  justify-content: center;
   height: 100vh;
   align-items: center;
   display: flex;
@@ -110,3 +172,70 @@
 }
 
 /* ----------------------LOGIN------------------- */
+
+.form-login {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 30px;
+}
+.signup-container {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+.input-signup {
+  justify-content: center;
+  text-align: center;
+  border: none;
+  flex-direction: column;
+  border-bottom: 1px solid #fcced3;
+  height: 35px;
+  margin-bottom: 20px;
+}
+.button-signup {
+  justify-content: center;
+  text-align: center;
+  background-color: #2cb1ba;
+  height: 45px;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  margin-top: 20px;
+  width: 300px;
+  cursor: pointer;
+}
+.h2form {
+  text-align: center;
+  margin-top: 30px;
+  color: rgba(0, 0, 0, 0.616);
+  font-size: xx-large;
+}
+
+/* PAGINATION */
+.button-contain {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.button-pagination {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: #2cb1ba;
+  height: 25px;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 0.8rem;
+  margin-top: 20px;
+  width: 150px;
+  cursor: pointer;
+}

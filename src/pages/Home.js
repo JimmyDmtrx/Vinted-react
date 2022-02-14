@@ -7,19 +7,22 @@ import { useState, useEffect } from "react";
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState();
+  const [page, setPage] = useState(1);
+
+  const limit = 5;
 
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        "https://lereacteur-vinted-api.herokuapp.com/offers"
+        `https://lereacteur-vinted-api.herokuapp.com/offers?limit=${limit}&page=${page}`
       );
-      console.log(response.data);
+      // console.log(response.data);
       setData(response.data);
       setIsLoading(false);
     };
 
     fetchData();
-  }, []);
+  }, [page]);
   //  cliquer sur une annonce
   // envoyer l'id de l'annonce en params dans l'url
   // récupérer cet id dans Offer.js
@@ -39,11 +42,15 @@ const Home = () => {
             <div>
               <div key={elem._id} className="card">
                 <div className="headOfCard">
-                  <img
-                    className="profilePic"
-                    src={elem.owner.account.avatar.secure_url}
-                    alt="pic"
-                  />
+                  {elem.owner.account.avatar ? (
+                    <img
+                      className="profilePic"
+                      src={elem.owner.account.avatar.secure_url}
+                      alt="pic"
+                    />
+                  ) : (
+                    ""
+                  )}
 
                   <div>
                     <p>{elem.owner.account.username}</p>
@@ -52,7 +59,7 @@ const Home = () => {
                 <Link to={`/product/${elem._id}`}>
                   <img
                     className="productPic"
-                    src={elem.product_pictures[0].secure_url}
+                    src={elem.product_image.secure_url}
                     alt="pic"
                   />
                 </Link>
@@ -62,6 +69,14 @@ const Home = () => {
             </div>
           );
         })}
+      </div>
+      <div>
+        <button className="button-pagination" onClick={() => setPage(page - 1)}>
+          Page précédente
+        </button>
+        <button className="button-pagination" onClick={() => setPage(page + 1)}>
+          Page suivante
+        </button>
       </div>
     </div>
   );

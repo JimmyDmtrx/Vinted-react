@@ -3,16 +3,19 @@ import Logo from "../assets/img/vinted-logo.png";
 const Header = () => {
   return (
     <div className="header">
-      <img className="logo" src={Logo} alt="logo" />
-      <input type="text" placeholder="Votre recherche..." />
+      <Link to={"/"}>
+        <img className="logo" src={Logo} alt="logo" />
+      </Link>
+      <input className="search" type="text" placeholder="Votre recherche..." />
       <Link to={"/signup"}>
-        <button>s'inscrire</button>
+        <button className="connect-button">s'inscrire</button>
       </Link>
       <Link to={"/login"}>
-        <button>se connecter</button>
+        <button className="connect-button">se connecter</button>
       </Link>
-
-      <button>vends tes articles</button>
+      <Link to={"/publish"}>
+        <button className="sold-button">vends tes articles</button>
+      </Link>
     </div>
   );
 };
