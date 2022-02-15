@@ -1,0 +1,52 @@
+.form-contain-check {
+  background-color: #eaedef;
+  padding: 20px;
+}
+.div-form-check {
+  background-color: white;
+  margin: 0 auto;
+  max-width: 500px;
+  padding: 35px;
+}
+.résumé {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.466);
+}
+
+.keyspan {
+  color: rgba(0, 0, 0, 0.466);
+}
+
+.li {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.total-check {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+}
+.total {
+  font-size: 1.2rem;
+}
+.credit-card-info {
+  padding: 30px;
+  border-bottom: 1px solid grey;
+}
+.pay-button {
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  width: 100%;
+  background-color: #2baeb7;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  padding: 0 14px;
+  margin-top: 32px;
+  cursor: pointer;
+}

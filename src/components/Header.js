@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Logo from "../assets/img/vinted-logo.png";
-
+import { Navigate } from "react-router-dom";
 const Header = ({ setUser, token }) => {
   return (
     <div className="header">
@@ -9,7 +9,15 @@ const Header = ({ setUser, token }) => {
       </Link>
       <input className="search" type="text" placeholder="Votre recherche..." />
       {token ? (
-        <button className="button-logout">Se déconnecter</button>
+        <button
+          className="button-logout"
+          onClick={() => {
+            setUser(null);
+            Navigate("/");
+          }}
+        >
+          Se déconnecter
+        </button>
       ) : (
         <div className="button-header">
           <Link to={"/signup"}>

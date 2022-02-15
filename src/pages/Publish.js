@@ -14,7 +14,7 @@ const Publish = () => {
   const [lieu, setLieu] = useState("");
   const [prix, setPrix] = useState("");
   const [picture, setPicture] = useState();
-  const [change, setChange] = useState(false);
+  // const [change, setChange] = useState(false);
   const userToken = Cookies.get("userToken");
 
   const handleSubmit = async (event) => {
@@ -148,10 +148,10 @@ const Publish = () => {
                   placeholder="0,00€"
                   onChange={(event) => setPrix(event.target.value)}
                 ></input>{" "}
-                <input
+                {/* <input
                   type="checkbox"
                   onChange={(event) => setChange(event.target.checked)}
-                />
+                /> */}
                 <input
                   className="button-hero"
                   type="submit"

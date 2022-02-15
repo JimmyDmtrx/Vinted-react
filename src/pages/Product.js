@@ -56,9 +56,7 @@ const Product = () => {
               </div>
               <Link
                 to="/payment"
-                state={
-                  ({ title: data.product_name }, { price: data.product_price })
-                }
+                state={{ title: data.product_name, price: data.product_price }}
               >
                 <button className="button-offer">Acheter</button>
               </Link>
