@@ -1,19 +1,29 @@
 .form-contain {
-  background-color: lightgrey;
+  width: 1280px;
   margin: 0 auto;
-  max-width: 1180px;
+}
+div {
+  display: block;
+}
+.publish-main {
+  background-color: #ebedee;
 }
 .h2publish {
+  font-weight: 400;
   display: block;
+  padding-top: 40px;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
 }
 .form-contain2 {
   border: 1px solid lightgrey;
   background-color: white;
   display: flex;
   flex-direction: column;
-  width: 80%;
-  text-align: center;
-  margin: 10px;
+  margin-top: 10px;
+  /* text-align: center; */
 }
 
 .sousdiv-contain {
@@ -30,15 +40,13 @@
   width: 50%;
 }
 .file-contain {
-  background-color: white;
   display: flex;
   height: 100px;
   align-items: center;
   justify-content: center;
+  background-color: #fff;
 }
 .input-publish {
-  justify-content: center;
-  text-align: center;
   border: none;
   flex-direction: column;
   border-bottom: 1px solid #dddddd;

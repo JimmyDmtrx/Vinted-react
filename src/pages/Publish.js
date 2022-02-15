@@ -53,113 +53,114 @@ const Publish = () => {
   return userToken ? (
     <div>
       <Header />
-      <div className="form-contain">
-        <h2 className="h2publish">Vends ton article</h2>
-        <form onSubmit={handleSubmit}>
-          <div className="file-contain">
-            <input
-              className="input-publish"
-              type="file"
-              onChange={(event) => setPicture(event.target.files[0])}
-            />
-          </div>
-          <div className="form-contain2">
-            <div className="sousdiv-contain">
-              <p className="entete">titre</p>
+      <div className="publish-main">
+        <div className="form-contain">
+          <h2 className="h2publish">Vends ton article</h2>
+          <form onSubmit={handleSubmit}>
+            <div className="file-contain">
               <input
                 className="input-publish"
-                value={titre}
-                type="text"
-                placeholder=" ex: chemise "
-                onChange={(event) => setTitre(event.target.value)}
-              ></input>
+                type="file"
+                onChange={(event) => setPicture(event.target.files[0])}
+              />
             </div>
             <div className="form-contain2">
               <div className="sousdiv-contain">
-                <p>Décris ton article</p>
-                <textarea
+                <p className="entete">titre</p>
+                <input
                   className="input-publish"
-                  value={article}
-                  type="textarea"
-                  placeholder="donnez des détails sur l'article"
-                  onChange={(event) => setArticle(event.target.value)}
-                ></textarea>
+                  value={titre}
+                  type="text"
+                  placeholder=" ex: chemise "
+                  onChange={(event) => setTitre(event.target.value)}
+                ></input>
+              </div>
+              <div className="form-contain2">
+                <div className="sousdiv-contain">
+                  <p>Décris ton article</p>
+                  <textarea
+                    className="input-publish"
+                    value={article}
+                    type="textarea"
+                    placeholder="donnez des détails sur l'article"
+                    onChange={(event) => setArticle(event.target.value)}
+                  ></textarea>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="form-contain2">
-            <div className="sousdiv-contain">
-              <p>Marque</p>
-              <input
-                className="input-publish"
-                value={marque}
-                type="text"
-                placeholder=" ex: sacroflex"
-                onChange={(event) => setMarque(event.target.value)}
-              ></input>
+            <div className="form-contain2">
+              <div className="sousdiv-contain">
+                <p>Marque</p>
+                <input
+                  className="input-publish"
+                  value={marque}
+                  type="text"
+                  placeholder=" ex: sacroflex"
+                  onChange={(event) => setMarque(event.target.value)}
+                ></input>
+              </div>
+              <div className="sousdiv-contain">
+                <p>taille</p>
+                <input
+                  className="input-publish"
+                  value={taille}
+                  type="text"
+                  placeholder="ex: L / 40/ 12"
+                  onChange={(event) => setTaille(event.target.value)}
+                ></input>
+              </div>
+              <div className="sousdiv-contain">
+                <p>Couleur</p>
+                <input
+                  className="input-publish"
+                  value={couleur}
+                  type="text"
+                  placeholder="ex: blaaack"
+                  onChange={(event) => setCouleur(event.target.value)}
+                ></input>
+              </div>
+              <div className="sousdiv-contain">
+                <p>Etat</p>
+                <input
+                  className="input-publish"
+                  value={etat}
+                  type="text"
+                  placeholder="neuf/porté/usé"
+                  onChange={(event) => setEtat(event.target.value)}
+                ></input>
+              </div>
+              <div className="sousdiv-contain">
+                <p>Lieu</p>
+                <input
+                  className="input-publish"
+                  value={lieu}
+                  type="text"
+                  placeholder="ex : Paris"
+                  onChange={(event) => setLieu(event.target.value)}
+                ></input>
+              </div>
             </div>
-            <div className="sousdiv-contain">
-              <p>taille</p>
-              <input
-                className="input-publish"
-                value={taille}
-                type="text"
-                placeholder="ex: L / 40/ 12"
-                onChange={(event) => setTaille(event.target.value)}
-              ></input>
+            <div className="form-contain2">
+              <div>
+                <p>prix</p>
+              </div>
+              <div className="sousdiv-contain">
+                <input
+                  className="input-publish"
+                  value={prix}
+                  type="Number"
+                  placeholder="0,00€"
+                  onChange={(event) => setPrix(event.target.value)}
+                ></input>{" "}
+                <input
+                  type="checkbox"
+                  onChange={(event) => setChange(event.target.checked)}
+                />
+                <input type="submit" value={"Ajouter"} />
+              </div>
             </div>
-            <div className="sousdiv-contain">
-              <p>Couleur</p>
-              <input
-                className="input-publish"
-                value={couleur}
-                type="text"
-                placeholder="ex: blaaack"
-                onChange={(event) => setCouleur(event.target.value)}
-              ></input>
-            </div>
-            <div className="sousdiv-contain">
-              <p>Etat</p>
-              <input
-                className="input-publish"
-                value={etat}
-                type="text"
-                placeholder="neuf/porté/usé"
-                onChange={(event) => setEtat(event.target.value)}
-              ></input>
-            </div>
-            <div className="sousdiv-contain">
-              <p>Lieu</p>
-              <input
-                className="input-publish"
-                value={lieu}
-                type="text"
-                placeholder="ex : Paris"
-                onChange={(event) => setLieu(event.target.value)}
-              ></input>
-            </div>
-          </div>
-          <div className="form-contain2">
-            <div>
-              <p>prix</p>
-            </div>
-            <div className="sousdiv-contain">
-              <input
-                className="input-publish"
-                value={prix}
-                type="Number"
-                placeholder="0,00€"
-                onChange={(event) => setPrix(event.target.value)}
-              ></input>
-            </div>
-
-            <input
-              type="checkbox"
-              onChange={(event) => setChange(event.target.checked)}
-            />
-          </div>
-          <input type="submit" value={"Ajouter"} />
-        </form>
+          </form>
+        </div>
       </div>
     </div>
   ) : (

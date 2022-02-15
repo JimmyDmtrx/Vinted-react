@@ -1,26 +1,89 @@
 .container-product {
-  margin: auto;
-  max-width: 60%;
-  display: flex;
-  margin-top: 50px;
-  background-color: antiquewhite;
-  align-items: center;
-  justify-content: center;
+  height: calc(100vh- 60px);
+  background-color: #ebedee;
+}
+li {
+  list-style: none;
 }
 .container-picture {
-  padding: 5px;
+  width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
+  grid-gap: 30px;
+  gap: 30px;
+}
+.product-pict {
+  height: 600px;
+  object-fit: cover;
+}
+.key-prod {
+  display: flex;
+  color: rgba(17, 17, 17, 0.438);
 }
 
+.list-offer {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 10px;
+}
+.offer-price {
+  font-size: 24px;
+  line-height: 32px;
+  color: #111;
+}
 .container-card {
-  width: 235px;
-  height: 360px;
-  padding: 0 6px 16px;
-  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+  width: 320px;
+  padding: 40px;
+}
+.divider {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: rgba(17, 17, 17, 0.1);
 }
 .user-card {
-  display: flex;
-  border-bottom: 1px solid grey;
+  display: block;
 }
 .user-card img {
   width: 50px;
+}
+.h2-card {
+  font-weight: 400;
+}
+.description-card {
+  color: #666;
+}
+.offer-avatar {
+  display: flex;
+  align-items: center;
+}
+.offer-avatar > img {
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.button-offer {
+  color: #fff;
+  background: #09b1ba;
+  border: 1px solid #09b1ba;
+  border-radius: 4px;
+  width: 100%;
+  font-size: 16px;
+  height: 36px;
+  padding: 0 16px;
+  line-height: 36px;
+  margin-top: 32px;
 }

@@ -39,7 +39,7 @@ const Home = () => {
           // console.log(elem);
           // console.log(elem.product_details);
           return (
-            <div>
+            <div className="shadow-card">
               <div key={elem._id} className="card">
                 <div className="headOfCard">
                   {elem.owner.account.avatar ? (
@@ -63,8 +63,11 @@ const Home = () => {
                     alt="pic"
                   />
                 </Link>
-                <p className="productDescription">{elem.product_name}</p>
-                <p className="product-price">{elem.product_price}€</p>
+                <div className="sous-picCard">
+                  <p className="productDescription">{elem.product_name}</p>
+                  <p className="product-price">{elem.product_price}€</p>
+                  <p>{elem.product_details.marque}</p>
+                </div>
               </div>
             </div>
           );

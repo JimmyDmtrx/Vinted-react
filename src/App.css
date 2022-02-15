@@ -20,7 +20,15 @@ button {
   height: 40px;
 }
 .search {
-  width: 600px;
+  width: 590px;
+  padding-left: 40px;
+  background-color: #f5f6f7;
+  border-radius: 5px;
+  height: 37px;
+  border: none;
+  outline: none;
+  /* font-family: "Maison Neue"; */
+  font-size: 16px;
 }
 /* ----------BUTTON_HAEDER--------- */
 
@@ -33,6 +41,7 @@ button {
   font-size: 12px;
   outline: none;
   cursor: pointer;
+  color: #2cb1ba;
 }
 .sold-button {
   background-color: #2cb1ba;
@@ -103,7 +112,7 @@ button {
   display: flex;
   width: 235px;
   flex-direction: column;
-  padding: 20px;
+  padding: 5px;
   height: 500px;
 }
 .profilePic {
@@ -113,7 +122,7 @@ button {
 }
 .productPic {
   width: 235px;
-  height: 438px;
+  height: 338px;
   object-fit: cover;
   overflow: hidden;
 }
@@ -122,12 +131,13 @@ button {
   align-items: center;
 }
 .productDescription {
-  max-height: 22px;
-  overflow: hidden;
 }
 .product-price {
   align-items: flex-end;
   justify-content: flex-end;
+}
+.sous-picCard {
+  display: block;
 }
 /* ----------------------FORM/SIGNUP------------------- */
 
@@ -193,6 +203,10 @@ button {
   border-bottom: 1px solid #fcced3;
   height: 35px;
   margin-bottom: 20px;
+}
+.shadow-card:hover {
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+  cursor: pointer;
 }
 .button-signup {
   justify-content: center;
