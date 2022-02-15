@@ -9,7 +9,7 @@ const Home = () => {
   const [data, setData] = useState();
   const [page, setPage] = useState(1);
 
-  const limit = 5;
+  const limit = 10;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -70,7 +70,7 @@ const Home = () => {
           );
         })}
       </div>
-      <div>
+      <div className="contain-pagi">
         <button className="button-pagination" onClick={() => setPage(page - 1)}>
           Page précédente
         </button>

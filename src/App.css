@@ -222,7 +222,11 @@ button {
   justify-content: center;
   text-align: center;
 }
+.contain-pagi {
+  display: flex;
 
+  justify-content: center;
+}
 .button-pagination {
   display: flex;
   justify-content: center;
@@ -238,4 +242,5 @@ button {
   margin-top: 20px;
   width: 150px;
   cursor: pointer;
+  padding: 8px;
 }

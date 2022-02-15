@@ -1,0 +1,47 @@
+.form-contain {
+  background-color: lightgrey;
+  margin: 0 auto;
+  max-width: 1180px;
+}
+.h2publish {
+  display: block;
+}
+.form-contain2 {
+  border: 1px solid lightgrey;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  text-align: center;
+  margin: 10px;
+}
+
+.sousdiv-contain {
+  display: flex;
+  padding: 10px;
+  padding-left: 5px;
+  border: 1px solid lightgray;
+}
+.sousdiv-contain p {
+  text-align: left;
+  flex: 2;
+}
+.sousdiv-contain input {
+  width: 50%;
+}
+.file-contain {
+  background-color: white;
+  display: flex;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+}
+.input-publish {
+  justify-content: center;
+  text-align: center;
+  border: none;
+  flex-direction: column;
+  border-bottom: 1px solid #dddddd;
+  height: 35px;
+  margin-bottom: 20px;
+}
