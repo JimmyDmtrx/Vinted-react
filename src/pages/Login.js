@@ -1,5 +1,3 @@
-import Header from "../components/Header";
-
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -39,7 +37,7 @@ const Login = ({ setUser }) => {
 
   return (
     <div>
-      <Header /> <h2 className="h2form">S'inscrire</h2>
+      <h2 className="h2form">S'inscrire</h2>
       <div className="form-login">
         <form className="signup-container" onSubmit={handleSubmit}>
           <input

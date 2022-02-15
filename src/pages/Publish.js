@@ -1,4 +1,3 @@
-import Header from "../components/Header";
 import { useState } from "react";
 import axios from "axios";
 import "../assets/CSS/Publish.css";
@@ -52,7 +51,6 @@ const Publish = () => {
 
   return userToken ? (
     <div>
-      <Header />
       <div className="publish-main">
         <div className="form-contain">
           <h2 className="h2publish">Vends ton article</h2>
@@ -75,17 +73,15 @@ const Publish = () => {
                   onChange={(event) => setTitre(event.target.value)}
                 ></input>
               </div>
-              <div className="form-contain2">
-                <div className="sousdiv-contain">
-                  <p>Décris ton article</p>
-                  <textarea
-                    className="input-publish"
-                    value={article}
-                    type="textarea"
-                    placeholder="donnez des détails sur l'article"
-                    onChange={(event) => setArticle(event.target.value)}
-                  ></textarea>
-                </div>
+              <div className="sousdiv-contain">
+                <p>Décris ton article</p>
+                <textarea
+                  className="input-publish"
+                  value={article}
+                  type="textarea"
+                  placeholder="donnez des détails sur l'article"
+                  onChange={(event) => setArticle(event.target.value)}
+                ></textarea>
               </div>
             </div>
             <div className="form-contain2">
@@ -156,7 +152,11 @@ const Publish = () => {
                   type="checkbox"
                   onChange={(event) => setChange(event.target.checked)}
                 />
-                <input type="submit" value={"Ajouter"} />
+                <input
+                  className="button-hero"
+                  type="submit"
+                  value={"Mettre en vente"}
+                />
               </div>
             </div>
           </form>

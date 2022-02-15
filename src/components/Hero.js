@@ -1,4 +1,5 @@
 import Heropic from "../assets/img/vinted-hero.jpeg";
+import { Link } from "react-router-dom";
 const Hero = () => {
   return (
     <div className="relative">
@@ -7,7 +8,9 @@ const Hero = () => {
       </div>
       <div className="tabHero">
         <p>prets à faire du tri dans vos placards ?</p>
-        <button className="button-hero">commencez à vendre</button>
+        <Link to={"/publish"}>
+          <button className="button-hero">commencez à vendre</button>
+        </Link>
       </div>
     </div>
   );

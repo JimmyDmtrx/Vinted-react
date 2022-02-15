@@ -18,11 +18,10 @@ div {
   margin-inline-end: 0px;
 }
 .form-contain2 {
-  border: 1px solid lightgrey;
   background-color: white;
   display: flex;
   flex-direction: column;
-  margin-top: 10px;
+  margin-bottom: 10px;
   /* text-align: center; */
 }
 
@@ -36,9 +35,11 @@ div {
   text-align: left;
   flex: 2;
 }
-.sousdiv-contain input {
+.sousdiv-contain input,
+textarea {
   width: 50%;
 }
+
 .file-contain {
   display: flex;
   height: 100px;

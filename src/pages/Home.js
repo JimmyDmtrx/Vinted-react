@@ -1,4 +1,3 @@
-import Header from "../components/Header";
 import Hero from "../components/Hero";
 import { Link } from "react-router-dom";
 import axios from "axios";
@@ -23,16 +22,10 @@ const Home = () => {
 
     fetchData();
   }, [page]);
-  //  cliquer sur une annonce
-  // envoyer l'id de l'annonce en params dans l'url
-  // récupérer cet id dans Offer.js
-  // faire une requête dans cette page pour récupérer les infos de cette annonce
-  // afficher ces infos
   return isLoading ? (
     <p>ca charge</p>
   ) : (
     <div>
-      <Header />
       <Hero />
       <div className="containCard">
         {data.offers.map((elem, index) => {

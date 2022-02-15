@@ -2,7 +2,6 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import "../assets/CSS/Product.css";
-import Header from "../components/Header";
 import { Link } from "react-router-dom";
 
 const Product = () => {
@@ -25,7 +24,6 @@ const Product = () => {
     <div>En cours de chargement ...</div>
   ) : (
     <div>
-      <Header />
       <div className="container-product">
         <div className="container-picture">
           <img src={data.product_pictures[0].secure_url} alt="pic" />
@@ -56,7 +54,12 @@ const Product = () => {
                   <span>{data.owner.account.username}</span>
                 </div>
               </div>
-              <Link to={"/payment"}>
+              <Link
+                to="/payment"
+                state={
+                  ({ title: data.product_name }, { price: data.product_price })
+                }
+              >
                 <button className="button-offer">Acheter</button>
               </Link>
             </div>
